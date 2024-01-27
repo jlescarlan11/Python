@@ -9,8 +9,10 @@ def saveFile():
                                         ('HTML file', '.html'),
                                         ('All files', '.*')
                                     ])
-    # filetext = str(text.get('1.0', END))
-    filetext = input("Enter some text I guess: ")
+    if file is None:
+        return
+    filetext = str(text.get('1.0', END))
+    # filetext = input("Enter some text I guess: ")
     file.write(filetext)
     file.close()
 
